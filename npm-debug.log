@@ -1,0 +1,20 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'link', '-g' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose stack Error: link should never be --global.
+4 verbose stack Please re-run this command with --local
+4 verbose stack     at EventEmitter.link (/usr/local/lib/node_modules/npm/lib/link.js:41:15)
+4 verbose stack     at Object.commandCache.(anonymous function) (/usr/local/lib/node_modules/npm/lib/npm.js:220:11)
+4 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/bin/npm-cli.js:72:28)
+4 verbose stack     at process._tickCallback (node.js:355:11)
+5 verbose cwd /Users/williamz/Documents/sqlsettings
+6 error Darwin 14.4.0
+7 error argv "node" "/usr/local/bin/npm" "link" "-g"
+8 error node v0.12.2
+9 error npm  v2.7.4
+10 error link should never be --global.
+10 error Please re-run this command with --local
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]

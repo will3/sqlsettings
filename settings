@@ -1,0 +1,76 @@
+Configure_strName	Configure_strValue	Configure_strType	Configure_strDescription	Configure_strReadOnly	Configure_strValidation	Configure_decStartRange	Configure_decEndRange	timestamp	Configure_strCategory	Configure_strValueShipped	Configure_OptionWarningMsg	Configure_strValueItemSQL
+Mobile_AboutUrl	http://www.emagine-entertainment.com/about-emagine/	string	The URL address of your About page.	F		NULL	NULL	0x000000000194823B	MC-UI		NULL	NULL
+Mobile_AllowLoyaltyPurchasesOnly	No	string	Restricts members' ticket purchases to Loyalty tickets only.	F	Yes-No	NULL	NULL	0x000000000194823C	MC-LOYALTY	No	NULL	NULL
+Mobile_AllowUsedSofa	No	string	Allows patrons to select individual seats on used sofas. A used sofa is a sofa for which some seats have been sold but remains unfilled.	F	Yes-No	NULL	NULL	0x000000000194823D	MC-SEAT	No	NULL	NULL
+Mobile_AllowVoucherRedemption	Yes	string	Determines if patrons can redeem vouchers. Patrons can enter a voucher number or scan the voucher barcode with their device camera.	F	Yes-No	NULL	NULL	0x000000000194823E	MC-VOUCHER	Yes	NULL	NULL
+Mobile_AndroidMinimumVersion		string	Specifies the minimum version of the Android app that must be installed on the patron's device.	F		NULL	NULL	0x000000000194823F	MC-UPGRADE		NULL	NULL
+Mobile_AndroidStoreUrl		string	The Google Play Store URL, referenced by the Android app for forced upgrades. Normally this does not need to be specified, unless the app package name changed. 	F		NULL	NULL	0x0000000001948240	MC-UPGRADE		NULL	NULL
+Mobile_AreaNameEnabled	Yes	string	Determines if seating area names are displayed on the seat map.	F	Yes-No	NULL	NULL	0x0000000001948241	MC-SEAT	No	NULL	NULL
+Mobile_AskLocationOnStartup	No	string	Determines whether patrons are prompted select their location from a list of regions (cities). GPS is not required.	F	Yes-No	NULL	NULL	0x0000000001948242	MC-LOCATION	No	NULL	NULL
+Mobile_AttributeFilterDefaultName		string	Allows films to be filtered by attributes and sets the default attribute filter.	F		NULL	NULL	0x0000000001948243	MC-FILTER		NULL	NULL
+Mobile_AutoScrollAdsSeconds	4	integer	Determines the number of seconds an advertising poster is displayed in the Advertising Slideshow before it is replaced by the next poster.	F		NULL	NULL	0x0000000001948244	MC-UI	4	NULL	NULL
+Mobile_AutoSeatSelection	Manual	string	Determines whether seats are automatically allocated or selected by the patron using the seat map.	F	Manual-Auto	NULL	NULL	0x0000000001948245	MC-SEAT	Manual	NULL	NULL
+Mobile_BookingBarcodeFormat	Code_39	string	Determines the barcode format used.	F	Code_39-Code_128-QR	NULL	NULL	0x0000000001948246	MC-ORDER	Code_39	NULL	NULL
+Mobile_BookingIdentifier	Reference	string	Specifies the text label for the booking identification number. Enter your preferred label in any supported language.	F		NULL	NULL	0x0000000001948247	MC-ORDER	Reference	NULL	NULL
+Mobile_CanPurchaseCompanionSeatsWithoutSpecialSeat	No	string	Determines if companion seats can be purchased without purchasing a special seat. 	F	Yes-No	NULL	NULL	0x0000000001948248	MC-SEAT	No	NULL	NULL
+Mobile_CanPurchaseSpecialSeats	No	string	Allows patrons to purchase special seats (disabled / wheelchair seats) if seat selection is enabled.	F	Yes-No	NULL	NULL	0x0000000001948249	MC-SEAT	No	NULL	NULL
+Mobile_CardWalletEnabled	Yes	string	Allows members to save their credit card details in a wallet for use in subsequent purchases.	F	Yes-No	NULL	NULL	0x000000000194824A	MC-LOYALTY	No	NULL	NULL
+Mobile_CinemaDayOffset	0	string	Offset for a cinema day when displaying sessions.	F		NULL	NULL	0x000000000194824B	MC-BUSINESS-DAY	0	NULL	NULL
+Mobile_ClientClass	CELL	string	Filters sessions according to the specified sales channel code. 	F		NULL	NULL	0x000000000194824C	MC-CONNECT	CELL	NULL	NULL
+Mobile_CompanionSeats	Auto	string	Controls companion seats. None = companion seats are not used. Auto = companion will be determined based on special seat location. Api = companion seats will be returns from Connect API	F	None-Auto-Api	NULL	NULL	0x000000000194824D	MC-SEAT	Auto	NULL	NULL
+Mobile_CreditCardExpiry	No	string	Determines if the credit card expiry field is displayed on the payment page.	F	Yes-No	NULL	NULL	0x000000000194824E	MC-PAYMENT	No	NULL	NULL
+Mobile_CurrencySymbol	$	string	Determines the currency symbol used in the app. Enter your preferred symbol.	F		NULL	NULL	0x000000000194824F	MC-PAYMENT	$	NULL	NULL
+Mobile_EnforceTicketingFlow	No	string	Directs the patron to the second page specified by Ticketing Flow every time the app is launched. If disabled, the patron's preferred second page is displayed.	F	Yes-No	NULL	NULL	0x0000000001948250	MC-UI	No	NULL	NULL
+Mobile_ExcludeID		string	Excludes Gift Stores to prevent them displaying in a cinema search. Enter the VISTAIT ID number for the cinema you wish to exclude.	F		NULL	NULL	0x0000000001948251	MC-CONNECT		NULL	NULL
+Mobile_ExcludeSeatingAreasWithoutTickets	No	string	Determines whether seating areas with no tickets are displayed on the seating map.	F	Yes-No	NULL	NULL	0x0000000001948252	MC-SEAT	No	NULL	NULL
+Mobile_ExtendedSplash	No	string	Adds an extended splash page when the app is launched.	F	Yes-No	NULL	NULL	0x0000000001948253	MC-UI	No	NULL	NULL
+Mobile_FirstPage	Advertising	string	Sets the Cinemas page, Movies page, or Advertising page as the first page. This setting is impacted by the setting Loyalty Home.	F	Cinemas-Movies-Advertising	NULL	NULL	0x0000000001948254	MC-UI	Advertising	NULL	NULL
+Mobile_FoodAndDrinkEnabled	Yes	string	If enabled, allows patrons to make concessions-only orders via a Concessions option in the menu drawer. Disabling this setting removes the menu option but does not prevent patrons from purchasing concessions as part of a ticket booking.	F	Yes-No	NULL	NULL	0x0000000001948255	MC-ORDER	Yes	NULL	NULL
+Mobile_GiftCardPINVisible	Yes	string	Determines whether the Gift Card PIN field displays when paying with a Gift Card	F	Yes-No	NULL	NULL	0x0000000001948256	MC-PAYMENT	Yes	NULL	NULL
+Mobile_HomePageFilmSortOrder	S	string	Sorts the order in which films are displayed. Select s to sort by sequence, a to sort alphabetically, and r to sort by release date. 	F	S-A-R	NULL	NULL	0x0000000001948257	MC-UI	S	NULL	NULL
+Mobile_HomePageIncludeComingSoon	Yes	string	Determines if Coming Soon films are displayed on the first page.	F	Yes-No	NULL	NULL	0x0000000001948258	MC-UI	Yes	NULL	NULL
+Mobile_HostUrl	http://connect.emagine-entertainment.com	string	The address that points to your Vista Connect environment.	F		NULL	NULL	0x00000000019482B0	MC-CONNECT	http://api.vista.co.nz	NULL	NULL
+Mobile_IosMinimumVersion		string	Specifies the minimum version of the iOS app that must be installed on the patron's device.	F		NULL	NULL	0x000000000194825A	MC-UPGRADE		NULL	NULL
+Mobile_IosStoreUrl		string	The Apple App Store URL, referenced by the iOS app for forced upgrades. Required when minimum version is specified. 	F		NULL	NULL	0x000000000194825B	MC-UPGRADE		NULL	NULL
+Mobile_LoginOnStartup	No	string	Determines whether a prompt to log into Loyalty is displayed when the app is launched.	F	Yes-No	NULL	NULL	0x000000000194825C	MC-LOYALTY	No	NULL	NULL
+Mobile_LoyaltyBarCodeType	Code_128	string	Determines the Loyalty barcode format used.	F	Code_39-Code_128-QR	NULL	NULL	0x000000000194825D	MC-LOYALTY	Code_128	NULL	NULL
+Mobile_LoyaltyEnabled	Yes	string	Enables or disables Loyalty integration. If this setting is enabled, members can access the benefits of their Loyalty programme.	F	Yes-No	NULL	NULL	0x000000000194825E	MC-LOYALTY	Yes	NULL	NULL
+Mobile_LoyaltyHideMessages	No	string	Determines if Loyalty messages are displayed on the Loyalty page when a member is logged in.	F	Yes-No	NULL	NULL	0x000000000194825F	MC-LOYALTY	No	NULL	NULL
+Mobile_LoyaltyHome	TopHalf	string	Sets the first page to show a full Loyalty page or any Hybrid page instead of a standard first page. Loyalty integration must enabled.	F	None-Full-TopHalf-BottomHalf	NULL	NULL	0x0000000001948260	MC-LOYALTY	None	NULL	NULL
+Mobile_LoyaltyPointPaymentEnabled	Yes	string	Determines whether Loyalty Point are available as a payment option	F	Yes-No	NULL	NULL	0x0000000001948261	MC-PAYMENT	Yes	NULL	NULL
+Mobile_LoyaltyPointsDecimals	2	integer	Defines the number of decimal places that points are rounded to.	F		NULL	NULL	0x0000000001948262	MC-LOYALTY	2	NULL	NULL
+Mobile_MaxNumberOfCinemasToLoad	3	string	The maximum number of Cinemas that the user can load.	F		NULL	NULL	0x0000000001948263	MC-UI	3	NULL	NULL
+Mobile_MaxTicketsAllowed	99	integer	Sets the maximum number of tickets a patron can purchase through the app. If set to 0, ticket purchases are disabled.	F		NULL	NULL	0x0000000001948264	MC-ORDER	99	NULL	NULL
+Mobile_MaxVoucherLength	12	string	Sets the maximum length of the voucher barcode field. Enter your preferred number.	F		NULL	NULL	0x0000000001948265	MC-VOUCHER	12	NULL	NULL
+Mobile_MaxVoucherPINLength	4	string	Sets the maximum length of a voucher PIN. Enter any value betwee 0 and 5. The value 0 renders the PIN length unlimited.	F	0-1-2-3-4	NULL	NULL	0x0000000001948266	MC-VOUCHER	4	NULL	NULL
+Mobile_MustFillSofa	Yes	string	Determines if selecting a sofa seat selects all remaining seats so that the sofa is entirely filled.	F	Yes-No	NULL	NULL	0x0000000001948267	MC-SEAT	Yes	NULL	NULL
+Mobile_PaymentAlipayEnabled	No	string	Determines whether Alipay Payment is enabled.	F	Yes-No	NULL	NULL	0x0000000001948268	MC-PAYMENT	No	NULL	NULL
+Mobile_PaymentMethod	Credit	string	Determines the type of payment call for a paid booking.	F	Credit-Web	NULL	NULL	0x0000000001948269	MC-PAYMENT	Credit	NULL	NULL
+Mobile_PaymentTimeoutMs	300000	integer	Sets the timeout threshold for successfully processing a payment transaction. Enter a time in milliseconds.	F		NULL	NULL	0x000000000194826A	MC-PAYMENT	300000	NULL	NULL
+Mobile_PaymentWeChatEnabled	No	string	Determines whether WeChat Payment is enabled.	F	Yes-No	NULL	NULL	0x000000000194826B	MC-PAYMENT	No	NULL	NULL
+Mobile_PosType		string	Determines the POS Type used for populating Loyalty membership fields.	F		NULL	NULL	0x000000000194826C	MC-LOYALTY		NULL	NULL
+Mobile_RadiusSliderEnabled	No	string	Enables or disables the Cinemas Around Me slider that increases or decrease the search radius when looking for nearby sites using the patron's location.	F	Yes-No	NULL	NULL	0x000000000194826D	MC-LOCATION	No	NULL	NULL
+Mobile_RadiusSliderMax	30	integer	Limits the geographical range of the search radius to a maximum of 50 units.	F	0-10-20-30-40-50	NULL	NULL	0x000000000194826E	MC-LOCATION	30	NULL	NULL
+Mobile_ResetPasswordUrl		string	The URL of the reset password webpage for Loyalty members. This address must be specified to enable the Forgot Password function on the apps login page.	F		NULL	NULL	0x000000000194826F	MC-LOYALTY		NULL	NULL
+Mobile_RowLabelsEnabled	Yes	string	Determines if seat row labels are displayed on the seat map.	F	Yes-No	NULL	NULL	0x0000000001948270	MC-SEAT	Yes	NULL	NULL
+Mobile_SeatNumbersEnabled	Yes	string	Determines if seat numbers are displayed on the seat map and order confirmation page.	F	Yes-No	NULL	NULL	0x0000000001948271	MC-SEAT	Yes	NULL	NULL
+Mobile_ShowCompanionSeatPurchaseWarning	Yes	string	If Yes and the user tries to purchase a companion seat, a warning dialog will be displayed notifying them that they may be asked to move.	F	Yes-No	NULL	NULL	0x0000000001948272	MC-SEAT	Yes	NULL	NULL
+Mobile_ShowHouseSeatsAsStairs	No	string	Determines if house seats are displayed as stairs on the seat map.	F	Yes-No	NULL	NULL	0x0000000001948273	MC-SEAT	No	NULL	NULL
+Mobile_ShowLoyaltyTicketPointsCost	No	string	Displays or hides the points cost of each Loyalty ticket purchased.	F	Yes-No	NULL	NULL	0x0000000001948274	MC-LOYALTY	No	NULL	NULL
+Mobile_ShowOnlyMemberTicketsWhenSignedIn	No	string	Determines if only Loyalty tickets or all tickets are visible to members when they are signed into Loyalty.	F	Yes-No	NULL	NULL	0x0000000001948275	MC-LOYALTY	No	NULL	NULL
+Mobile_ShowSpecialSeatPurchaseWarning	Yes	string	If Yes and the user tries to purchase a wheelchair seat, a warning dialog will be displayed notifying them that the space contains no seat(s).	F	Yes-No	NULL	NULL	0x0000000001948276	MC-SEAT	Yes	NULL	NULL
+Mobile_ShowSpecialSeats	No	string	Determines if special seats are displayed on the seat map.	F	Yes-No	NULL	NULL	0x0000000001D9B01F	MC-SEAT	Yes	NULL	NULL
+Mobile_SignUpOption	Full	string	Determines the level of patron details that must submitted upfront when signing up for a Loyalty membership. 	F	None-Basic-Full	NULL	NULL	0x0000000001948278	MC-LOYALTY	Basic	NULL	NULL
+Mobile_SignUpTermsAndConditionsUrl		string	The URL for the terms and conditions that patrons agree to when they sign up for a Loyalty membership. 	F		NULL	NULL	0x0000000001948279	MC-LOYALTY		NULL	NULL
+Mobile_SocialSharingEnabled	Yes	string	Allows patrons to share their app activity via text message, email, and social media. Also adds a booking reminder to the calendar.	F	Yes-No	NULL	NULL	0x000000000194827A	MC-UI	Yes	NULL	NULL
+Mobile_SortTicketsByPriceGroup	Yes	string	Sorts tickets displayed by Price Group.	F	Yes-No	NULL	NULL	0x000000000194827B	MC-FILTER	Yes	NULL	NULL
+Mobile_TermsAndConditions	None	string	Determines if terms and conditions are displayed to the patron for acceptance.	F	None-Mandatory	NULL	NULL	0x000000000194827C	MC-UI	None	NULL	NULL
+Mobile_TicketingFlow	Movies	string	Determines which page the patron navigates to after the first page. Your selection will also surface either the Show Cinemas or Show Movies button on the first page.	F	Cinemas-Movies	NULL	NULL	0x000000000194827D	MC-UI	Movies	NULL	NULL
+Mobile_UseAttributeDescriptionForFilterList	No	string	When enabled, the full description of an attribute is displayed when using the experience filter. When disabled, only the attribute name is shown.	F	Yes-No	NULL	NULL	0x000000000194827E	MC-UI	No	NULL	NULL
+Mobile_UseBookingConfirmationPhoneField	Yes	string	Surfaces or hides the field for the patron's phone number on the customer details page.	F	Yes-No	NULL	NULL	0x000000000194827F	MC-ORDER	Yes	NULL	NULL
+Mobile_UseCVN	Yes	string	Determines whether the CVN security code is required to authorise credit card payments.	F	Yes-No	NULL	NULL	0x0000000001948280	MC-PAYMENT	Yes	NULL	NULL
+Mobile_UseGPS	Yes	string	Allows the app to use GPS on mobile devices to determine the patron's location. Also enables the Cinemas Around Me region filter when searching for cinemas.	F	Yes-No	NULL	NULL	0x0000000001948281	MC-LOCATION	No	NULL	NULL
+Mobile_UseMiles	Yes	string	Sets the unit of measure for distance as miles. Selecting No uses kilometres.	F	Yes-No	NULL	NULL	0x0000000001948282	MC-LOCATION	No	NULL	NULL
+Mobile_VouchersRequirePINs	No	string	Determines whether a PIN is required to redeem vouchers.	F	Yes-No	NULL	NULL	0x0000000001948283	MC-VOUCHER	No	NULL	NULL
+Mobile_WebPaymentProvider		string	Determines the payment provider when web payments are used.	F		NULL	NULL	0x0000000001948284	MC-PAYMENT		NULL	NULL
+Mobile_ZipCodeRequired	No	string	Determines if patrons must enter their zip code when submitting customer details.	F	Yes-No	NULL	NULL	0x0000000001948285	MC-ORDER	No	NULL	NULL

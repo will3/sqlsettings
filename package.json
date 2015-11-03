@@ -1,0 +1,16 @@
+{
+  "name": "sqlsettings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Will Zhou <will3.git@gmail.com> (http://github.com/will3)",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "lodash": "^3.10.1",
+    "stdout-stream": "^1.4.0"
+  }
+}
