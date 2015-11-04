@@ -71,7 +71,7 @@ SqlSettings.prototype = {
 
       var settingValue = normalizeSettingValue(value, type, validation);
       var settingKey = normalizeSettingName(name);
-      if (typeof settingValue === 'string' && settingValue.length === 0) {
+      if(settingValue.length === 0){
         return;
       }
 
