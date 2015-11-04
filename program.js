@@ -1,6 +1,5 @@
 var fs = require('fs');
-var SqlSettings = require('./sqlsettings');
-var sqlSettings = new SqlSettings();
+var parseSettings = require('./sqlsettings');
 var stdout = require('stdout-stream');
 
 var program = require('commander');
@@ -14,6 +13,6 @@ var headers = [];
 
 var data = fs.readFileSync(inputPath, 'utf8');
 
-var parsed = sqlSettings.parseRaw(data);
+var parsed = parseSettings(data);
 
 stdout.write(parsed);

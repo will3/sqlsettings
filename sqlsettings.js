@@ -1,89 +1,80 @@
 var _ = require('lodash');
 
-var SqlSettings = function() {};
+module.exports = function(data) {
+  var read = function(row, key) {
+    var index = _.indexOf(headers, key);
+    if (index === -1) {
+      throw new Error('cannot find column ' + key);
+    }
 
-SqlSettings.prototype = {
-  constructor: SqlSettings,
+    return row[index];
+  };
 
-  parseRaw: function(data) {
+  var mobilePrefix = 'Mobile_';
+  var vistaPrefix = 'vista_';
 
-    var read = function(row, key) {
-      var index = _.indexOf(headers, key);
-      if (index === -1) {
-        throw new Error('cannot find column ' + key);
-      }
+  var normalizeSettingName = function(name) {
+    var index = name.indexOf(mobilePrefix);
+    if (index === -1 || index !== 0) {
+      throw new Error('not a mobile setting: ' + name);
+    }
 
-      return row[index];
-    };
+    var trimmed = name.substring(index + mobilePrefix.length);
 
-    var mobilePrefix = 'Mobile_';
-    var vistaPrefix = 'vista_';
+    return vistaPrefix + trimmed.charAt(0).toLowerCase() + trimmed.slice(1);
+  };
 
-    var normalizeSettingName = function(name) {
-      var index = name.indexOf(mobilePrefix);
-      if (index === -1 || index !== 0) {
-        throw new Error('not a mobile setting: ' + name);
-      }
-
-      var trimmed = name.substring(index + mobilePrefix.length);
-
-      return vistaPrefix + trimmed.charAt(0).toLowerCase() + trimmed.slice(1);
-    };
-
-    var normalizeSettingValue = function(value, type, validation) {
-      if (type === 'string') {
-        if (validation === 'Yes-No') {
-          if (value === 'Yes') {
-            return true;
-          } else if (value === 'No') {
-            return false;
-          }
-
-          throw new Error('error parsing setting value with params: ' + [value, type, validation].join(', '));
+  var normalizeSettingValue = function(value, type, validation) {
+    if (type === 'string') {
+      if (validation === 'Yes-No') {
+        if (value === 'Yes') {
+          return true;
+        } else if (value === 'No') {
+          return false;
         }
 
-        return value;
-      } else if (type === 'integer') {
-        return parseInt(type);
+        throw new Error('error parsing setting value with params: ' + [value, type, validation].join(', '));
       }
 
-      throw new Error('unsupported type: ' + type);
-    };
+      return value;
+    } else if (type === 'integer') {
+      return parseInt(type);
+    }
 
-    var settings = {};
+    throw new Error('unsupported type: ' + type);
+  };
 
-    var lines = data.split('\n');
-    var count = 0;
+  var settings = {};
 
-    lines.forEach(function(line) {
-      var row = line.split('\t');
+  var lines = data.split('\n');
+  var count = 0;
 
-      if (count === 0) {
-        headers = row;
-        count++;
-        return;
-      }
+  lines.forEach(function(line) {
+    var row = line.split('\t');
 
-      var name = read(row, 'Configure_strName');
-      var value = read(row, 'Configure_strValue');
-      var type = read(row, 'Configure_strType');
-      var validation = read(row, 'Configure_strValidation');
-
-      var settingValue = normalizeSettingValue(value, type, validation);
-      var settingKey = normalizeSettingName(name);
-      if(settingValue.length === 0){
-        return;
-      }
-
-      settings[settingKey] = settingValue;
-
+    if (count === 0) {
+      headers = row;
       count++;
-    });
+      return;
+    }
 
-    return JSON.stringify({
-      'Settings': settings
-    }, null, 4);
-  }
+    var name = read(row, 'Configure_strName');
+    var value = read(row, 'Configure_strValue');
+    var type = read(row, 'Configure_strType');
+    var validation = read(row, 'Configure_strValidation');
+
+    var settingValue = normalizeSettingValue(value, type, validation);
+    var settingKey = normalizeSettingName(name);
+    if (settingValue.length === 0) {
+      return;
+    }
+
+    settings[settingKey] = settingValue;
+
+    count++;
+  });
+
+  return JSON.stringify({
+    'Settings': settings
+  }, null, 4);
 };
-
-module.exports = SqlSettings;

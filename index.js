@@ -1,2 +1,1 @@
-var SqlSettings = require('./sqlsettings');
-module.exports = new SqlSettings();
+module.exports = require('./sqlsettings');
